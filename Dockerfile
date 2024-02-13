@@ -22,4 +22,4 @@ RUN npm install
 # EXPOSE 8080
 
 # билд приложения
-CMD ["npm", "run", "build", "&&", "cp out static"]
+CMD ["npm", "run", "build"]
