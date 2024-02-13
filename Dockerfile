@@ -16,10 +16,10 @@ WORKDIR /app
 RUN npm install
 
 #
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
+# ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # expose port 8080 on the container
-EXPOSE 8080
+# EXPOSE 8080
 
 # билд приложения
-CMD ["npm", "run", "build"]
+CMD ["npm", "run", "build", "&&", "cp out static"]
