@@ -45,7 +45,7 @@ export default function CityChange() {
             {isListShowing && <div className="absolute top-8 -left-4 bg-white p-4 shadow-lg rounded-md border z-10 ">
                 {cities
                     ? <ul className="flex flex-col whitespace-nowrap gap-3 gap-x-2 text-black flex-wrap">
-                        {cities.map(city => <li className="hover:text-sky-400 cursor-pointer">{city.name}</li>)
+                        {cities.map((city, i) => <li key={i} className="hover:text-sky-400 cursor-pointer">{city.name}</li>)
                             
                         }
                     </ul>
