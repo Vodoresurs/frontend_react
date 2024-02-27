@@ -1,18 +1,19 @@
 'use client'
 
 import { useEffect, useState } from "react";
+import { ICity } from "@/app/interfaces/ICity";
 
-interface City {
-    id: number;
-    name: string;
-    price: string;
-    phones: string[];
-}
+// interface City {
+//     id: number;
+//     name: string;
+//     price: string;
+//     phones: string[];
+// }
 
 export default function CityChange() {
 
     const [ isListShowing, setIsListShowing ] = useState(false);
-    const [ cities, setCities ] = useState<City[]>([]);
+    const [ cities, setCities ] = useState<ICity[]>([]);
 
     useEffect(() => {
         getCitiesData();
@@ -21,7 +22,7 @@ export default function CityChange() {
     const getCitiesData = async () => {
         try {
             const res = await fetch('https://aquapoverka.ru/api/v1/cities/')
-            const cities: City[] = await res.json()
+            const cities: ICity[] = await res.json()
             if (res.status === 200) {
                 setCities(cities);
             }
