@@ -10,9 +10,6 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
-  title: "Vodoresurs",
-  description: "Поверка водосчётчиков по всей России",
 =======
   title: "Единая региональная метрологическая служба",
   description: "Поверка водосчётчиков",
