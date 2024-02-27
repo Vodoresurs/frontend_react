@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Construction from "./components/Construction/Construction";
+import Hero from "./components/Hero/Hero";
 
 export default function Home() {
   return (
-    <Construction />
+    <Hero />
   );
 }
