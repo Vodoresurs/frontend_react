@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
+import { CityProvider } from '@/app/providers/CityProvider'
 import "./globals.css";
+
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -14,6 +16,8 @@ export const metadata: Metadata = {
   description: "Поверка водосчетчиков",
 };
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,9 +26,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={roboto.className}>
-        <Header />
-        {children}
-        <Footer />
+        <CityProvider>
+          <Header />
+          {children}
+          <Footer />
+        </CityProvider>
       </body>
     </html>
   );

@@ -1,9 +1,13 @@
 // import styles from './Header.module.scss'
+'use client'
 import Image from "next/image"
 import Link from "next/link";
 import CityChange from "../CityChange/CityChange";
+import {useCurrentCity} from "@/app/providers/CityProvider"
 
 const Header:React.FC = () => {
+    const { currentCity } = useCurrentCity();
+
     return (
         <header className="">
             <div className="bg-gradient-to-b from-slate-100 to-gray-50 border-slate-100 border-b">
@@ -27,7 +31,8 @@ const Header:React.FC = () => {
                         <li><Link href="/contact">Контакты</Link></li>
                     </ul>
                     <div className="font-extrabold text-xl text-dark-sea">
-                        <a href="tel:79507454572">+7 (950) 745-45-72</a>
+                        {/* <a href="tel:79507454572">+7 (950) 745-45-72</a> */}
+                        <a href="tel:79507454572">{currentCity.phones[0]}</a>
                     </div>
                 </div>
             </div>
