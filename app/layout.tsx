@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={roboto.className}>
+      <body className={`${roboto.className} bg-white`}>
         <Header />
         {children}
         <Footer />

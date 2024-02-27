@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 
 interface City {
     id: number;
@@ -10,8 +9,6 @@ interface City {
     phones: string[];
 }
 
-
-// export default function CityChange({ cities }: InferGetStaticPropsType<typeof getStaticProps>) {
 export default function CityChange() {
 
     const [ isListShowing, setIsListShowing ] = useState(false);
@@ -54,27 +51,3 @@ export default function CityChange() {
         </div>
     )
 } 
-
-
-
-// export const getStaticProps = (async (context) => {
-//     const res = await fetch('https://aquapoverka.ru/api/v1/cities/')
-//     const repo = await res.json()
-//     return { props: { repo } }
-//   }) satisfies GetStaticProps<{
-//     repo: Repo
-//   }>
-
-
-//   export async function getStaticProps() {
-    
-//     const res = await fetch('https://aquapoverka.ru/api/v1/cities/')
-//     const cities = await res.json()
-   
-   
-//     return {
-//       props: {
-//         cities,
-//       },
-//     }
-//   }
