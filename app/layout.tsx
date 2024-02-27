@@ -10,8 +10,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Единая региональная метрологическая служба",
-  description: "Поверка водосчётчиков",
+  title: "Единая Региональная Метрологическая Служба",
+  description: "Поверка водосчетчиков",
 };
 
 export default function RootLayout({
