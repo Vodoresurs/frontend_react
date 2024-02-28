@@ -7,7 +7,7 @@ import "./Hero.css"
 export default function Hero() {
   return (
     <div className="bg-white">
-      <div className="hero w-[1196px] m-auto py-40">
+      <div className="hero w-[1196px] max-h-[800px] m-auto py-40">
         <div className="flex justify-between mb-20">
           <div className="w-5/12">
             <h1 className="text-4xl font-black mb-8">Поверка счетчиков воды на дому без снятия</h1>
