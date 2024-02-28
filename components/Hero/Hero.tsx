@@ -56,7 +56,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="flex justify-between">
-          <motion.div className="flex w-[280px] justify-between p-3 bg-gradient-to-b from-gray-50 to-slate-100 border-gray-400 rounded-md items-center"
+          <motion.div className="flex w-[280px] justify-between p-3 bg-gradient-to-b from-gray-50 to-slate-100 border rounded-md items-center"
             initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{
@@ -65,12 +65,12 @@ export default function Hero() {
                 ease: [0, 0.71, 0.2, 1.01]
               }}
           >
-              <div className="w-14 h-14 border rounded-md flex justify-center items-center">
-                  <Image className="m-auto"src="/gost_icon.svg" alt="Счетчик воды" width="26" height="26"/>
+              <div className="w-14 h-14 border border-sky-400 rounded-md flex justify-center items-center">
+                  <Image className="m-auto"src="/gost_icon.svg" alt="Счетчик воды" width="22" height="22"/>
               </div>
               <div className="w-3/4">Методика поверки по ГОСТ</div>
           </motion.div>
-          <motion.div className="flex w-[280px] justify-between p-3 bg-gradient-to-b from-gray-50 to-slate-100 border-gray-400 rounded-md items-center"
+          <motion.div className="flex w-[280px] justify-between p-3 bg-gradient-to-b from-gray-50 to-slate-100 border rounded-md items-center"
             initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{
@@ -79,12 +79,12 @@ export default function Hero() {
                 ease: [0, 0.71, 0.2, 1.01]
               }}
           >
-              <div className="w-14 h-14 border rounded-md flex justify-center items-center">
+              <div className="w-14 h-14 border border-sky-400 rounded-md flex justify-center items-center">
                   <Image className="m-auto"src="/arshin_icon.svg" alt="Счетчик воды" width="26" height="26"/>
               </div>
               <div className="w-3/4">Внесение результата в ФГИС «АРШИН»</div>
           </motion.div>
-          <motion.div className="flex w-[280px] justify-between p-3 bg-gradient-to-b from-gray-50 to-slate-100 border-gray-400 rounded-md items-center"
+          <motion.div className="flex w-[280px] justify-between p-3 bg-gradient-to-b from-gray-50 to-slate-100 border rounded-md items-center"
             initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{
@@ -93,12 +93,12 @@ export default function Hero() {
                 ease: [0, 0.71, 0.2, 1.01]
               }}
           >
-              <div className="w-14 h-14 border rounded-md flex justify-center items-center">
+              <div className="w-14 h-14 border border-sky-400 rounded-md flex justify-center items-center">
                   <Image className="m-auto"src="/accreditation_icon.svg" alt="Счетчик воды" width="24" height="26"/>
               </div>
               <div className="w-3/4">Аккредитованные метрологи</div>
           </motion.div>
-          <motion.div className="flex w-[280px] justify-between p-3 bg-gradient-to-b from-gray-50 to-slate-100 border-gray-400 rounded-md items-center"
+          <motion.div className="flex w-[280px] justify-between p-3 bg-gradient-to-b from-gray-50 to-slate-100 border rounded-md items-center"
             initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{
@@ -107,7 +107,7 @@ export default function Hero() {
                 ease: [0, 0.71, 0.2, 1.01]
               }}
           >
-              <div className="w-14 h-14 border rounded-md flex justify-center items-center">
+              <div className="w-14 h-14 border border-sky-400 rounded-md flex justify-center items-center">
                   <Image className="m-auto"src="/meter_icon.svg" alt="Счетчик воды" width="26" height="26"/>
               </div>
               <div className="w-3/4">Замена счётчика, непрошедшего поверку</div>
