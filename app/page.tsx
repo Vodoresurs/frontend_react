@@ -43,9 +43,7 @@ export default function Home() {
 
       <div>
         <div className="w-[1196px] m-auto py-20">
-          
             <h2 className="text-lg font-extrabold mb-10 text-center">Как все работает?</h2>
-          
           <div className="w-4/6 m-auto text-sm">
             <ul className="flex justify-center">
               <li className="w-1/4 p-2">
@@ -74,13 +72,25 @@ export default function Home() {
                   <span className="w-9 h-9 my-auto px-3 py-2 block text-white rounded-full border-2 border-white font-bold">4</span>
                 </div>
                 <h3 className="font-bold mb-4">Оформление документов </h3>
-                <span className="font-light">отнесите документы в течение 2-х недель на регистрацию в расчетный орган
-</span>
+                <span className="font-light">отнесите документы в течение 2-х недель на регистрацию в расчетный орган</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
+      <div>
+        <div className="w-[1196px] m-auto text-center bg-business-ad relative">
+          <div className="text-white bg-dark-sea bg-opacity-80 h-full py-20">
+            <span className="block mb-2">Приглашаем к сотрудничеству</span>
+            <h2 className="text-3xl font-extrabold mb-10">Готовый бизнес по поверке счётчиков</h2>
+            <div className="w-4/6 m-auto text-xs">
+              <p >Помощь в получение аккредитации для поверки счетчиков воды</p>
+              <p className="mb-4">Подтверждение компетентности / аудит</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </>
   );
 }
