@@ -26,8 +26,8 @@ const Footer:React.FC = () => {
                     </div>
                     <span className="text-center">2024 | Единая региональная метрологическая служба</span>
                     <ul className="flex gap-2 w-1/6 justify-end">
-                        <li><a href="#">vk</a></li>
-                        <li><a href="#">tg</a></li>
+                        <li><a href="https://vk.com/"><Image src={`/vk_logo.svg`} alt="logo" width="20" height="20"/></a></li>
+                        <li><a href="https://t.me/"><Image src={`/tg_logo.svg`} alt="logo" width="20" height="20"/></a></li>
                     </ul>
                 </div>
             </div>

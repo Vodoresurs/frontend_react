@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode, createContext, useContext, useState } from "react";
+import { ReactNode, createContext, useContext, useEffect, useState } from "react";
 import { ICity } from "@/app/interfaces/ICity"
 
 type CityContextProps = {
@@ -14,6 +14,8 @@ const defaultCity: ICity = {
     price: "650.00",
 }
 
+
+
 interface CityContextType {
   currentCity: ICity;
   setCurrentCity: React.Dispatch<React.SetStateAction<ICity>>;
@@ -24,6 +26,32 @@ const CityContext = createContext<CityContextType | undefined>(undefined);
 export const CityProvider: React.FC<CityContextProps> = ({ children }) => {
 
   const [ currentCity, setCurrentCity ] = useState<ICity>(defaultCity);
+
+  useEffect(() => {
+    function isValidCity(city: any): city is ICity {
+        return typeof city === 'object' && 'name' in city;
+    }
+  
+    const lsCity = localStorage.getItem('currentCity')
+    if (lsCity) {
+        try {
+            const parsedCity: ICity = JSON.parse(lsCity);
+            if (isValidCity(parsedCity)) {
+                setCurrentCity(parsedCity);
+                return;
+            }
+        } catch (error) {
+            console.log('Error parsing city from local storage:', error);
+        }
+    }
+    localStorage.setItem('currentCity', JSON.stringify(currentCity));
+  }, [])
+
+  useEffect(() => {
+    if (currentCity.id !== defaultCity.id) {
+      localStorage.setItem('currentCity', JSON.stringify(currentCity));
+    }
+  }, [currentCity])
 
     return (
       <CityContext.Provider value={{currentCity, setCurrentCity}}>

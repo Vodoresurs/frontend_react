@@ -1,6 +1,6 @@
 'use client'
 
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ICity } from "@/app/interfaces/ICity";
 import {useCurrentCity} from "@/app/providers/CityProvider"
 
@@ -21,6 +21,10 @@ export default function CityChange() {
         getCitiesData();
     }, [])
 
+    // useEffect(() => {
+    //     localStorage.setItem('currentCity', JSON.stringify(currentCity));
+    // }, [currentCity])
+
     const getCitiesData = async () => {
         try {
             const res = await fetch('https://aquapoverka.ru/api/v1/cities/')
@@ -28,7 +32,6 @@ export default function CityChange() {
             if (res.status === 200) {
                 setCities(cities);
             }
-            console.log(cities);
             return res;
         } catch (error) {
             console.log(error);
