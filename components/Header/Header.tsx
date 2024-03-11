@@ -22,7 +22,7 @@ const Header:React.FC = () => {
             <div className="bg-gradient-to-b from-slate-100 to-gray-50 border-slate-100 border-b">
                 <div className="flex justify-between w-[1196px] m-auto py-2 items-center text-gray-400 text-sm">
                     <CityChange />
-                    <a href="https://admin.aquapoverka.ru">
+                    <a href="/admin">
                         <Image src={`/signin_icon.svg`} className="inline mr-2" alt="logo" width="16" height="16"/>
                         <span>Вход для партнёров</span>
                     </a>

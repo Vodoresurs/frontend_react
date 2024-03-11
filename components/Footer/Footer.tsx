@@ -22,7 +22,7 @@ const Footer:React.FC = () => {
             <div className="bg-gradient-to-b from-slate-100 to-gray-50 border-slate-100 border-t">
                 <div className="flex justify-between w-[1196px] m-auto py-4 items-center text-slate-400">
                     <div className="w-1/6">
-                        <Image src={`/Logo_site.svg`} alt="logo" width="200" height="200"/>
+                        <Image src={`/Logo_site_slate.svg`} alt="logo" width="200" height="200"/>
                     </div>
                     <span className="text-center">2024 | Единая региональная метрологическая служба</span>
                     <ul className="flex gap-2 w-1/6 justify-end">
